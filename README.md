@@ -24,3 +24,10 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+### To run application use the following commands
+
+```bash
+$ ionic serve
+```
+
+And application should be opened in browser. If it is not opened follow the next [link](http://localhost:8100)
