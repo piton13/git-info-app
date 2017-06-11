@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
+import { GitInitializationPage } from './sub-pages/git-initialization/git-initialization';
+import { GitRemoteLinkingPage } from './sub-pages/remote-linking/remote-linking';
 
 @Component({
   selector: 'git-configuration-page',
   templateUrl: 'git-configuration.html'
 })
 export class GitConfigurationPage {
-  public items: Array<{ title: string, note: string/*, class: any*/ }>;
+  public items: Array<{ title: string, note: string, class: any }>;
 
   constructor() {
     this.items = [{
       title: 'Git initialization',
       note: 'This is a ',
-      // class: OperationWithBranch
+      class: GitInitializationPage
     }, {
       title: 'Local/Remote linking',
       note: 'There ',
-      // class: OperationWithBranch
+      class: GitRemoteLinkingPage
     }];
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'command-list',
@@ -7,27 +7,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CommandListPage {
   @Input() public items: Object[];
-  // items: Array<{title: string, note: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // Let's populate this page with some filler content for funzies
-    // this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    //   'american-football', 'boat', 'bluetooth', 'build'];
-
-    /*this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }*/
-  }
+  constructor(public navCtrl: NavController) {}
 
   itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    /*this.navCtrl.push(ListPage, {
-      item: item
-    });*/
+    this.navCtrl.push(item.class);
   }
 }
