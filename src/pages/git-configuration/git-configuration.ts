@@ -7,17 +7,20 @@ import { GitRemoteLinkingPage } from './sub-pages/remote-linking/remote-linking'
   templateUrl: 'git-configuration.html'
 })
 export class GitConfigurationPage {
-  public items: Array<{ title: string, note: string, class: any }>;
+  public listData: { title: string, items: Array<{ title: string, note: string, class: any }> };
 
   constructor() {
-    this.items = [{
-      title: 'Git initialization',
-      note: 'This is a ',
-      class: GitInitializationPage
-    }, {
-      title: 'Local/Remote linking',
-      note: 'There ',
-      class: GitRemoteLinkingPage
-    }];
+    this.listData = {
+      title: '',
+      items: [{
+        title: 'Git initialization',
+        note: 'This is a ',
+        class: GitInitializationPage
+      }, {
+        title: 'Local/Remote linking',
+        note: 'There ',
+        class: GitRemoteLinkingPage
+      }]
+    };
   }
 }

@@ -6,11 +6,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'command-list.html'
 })
 export class CommandListPage {
-  @Input() public items: Object[];
+  @Input() public listData: Object[];
 
   constructor(public navCtrl: NavController) {}
 
   itemTapped(event, item) {
+    if (!item.class) {
+      return;
+    }
     this.navCtrl.push(item.class);
   }
 }

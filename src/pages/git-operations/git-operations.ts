@@ -5,21 +5,24 @@ import { Component } from '@angular/core';
   templateUrl: 'git-operations.html'
 })
 export class GitOperationsPage {
-  public items: Array<{ title: string, note: string/*, class: any*/ }>;
+  public listData: { title: string, items: Array<{ title: string, note: string/*, class: any*/ }> };
 
   constructor() {
-    this.items = [{
-      title: 'Operations with a branch',
-      note: 'This is a branch operations',
-      // class: OperationWithBranch
-    }, {
-      title: 'Operations with branches',
-      note: 'There are branch operations',
-      // class: OperationWithBranch
-    }, {
-      title: 'Operations with remote branches',
-      note: 'There are remote branch operations',
-      // class: OperationWithBranch
-    }];
+    this.listData = {
+      title: 'Git operations',
+      items: [{
+        title: 'Operations with a branch',
+        note: 'This is a branch operations',
+        // class: OperationWithBranch
+      }, {
+        title: 'Operations with branches',
+        note: 'There are branch operations',
+        // class: OperationWithBranch
+      }, {
+        title: 'Operations with remote branches',
+        note: 'There are remote branch operations',
+        // class: OperationWithBranch
+      }]
+    };
   }
 }

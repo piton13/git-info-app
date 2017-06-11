@@ -3,13 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>{{listData?.title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <button ion-item *ngFor="let item of listData?.items" (click)="itemTapped($event, item)">
       <!--<ion-icon [name]="item.icon" item-left></ion-icon>-->
       {{item.title}}
       <div class="item-note" item-right>
