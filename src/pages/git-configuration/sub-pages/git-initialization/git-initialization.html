@@ -3,10 +3,10 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Git initialization</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <command-page [commandInfo]="commandInfo"></command-page>
+  <command-page *ngFor="let command of commands" [commandInfo]="command"></command-page>
 </ion-content>

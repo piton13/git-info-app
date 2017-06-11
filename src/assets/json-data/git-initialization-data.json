@@ -1,0 +1,9 @@
+{
+  "title": "Git initialization",
+  "commands": [
+    {
+      "description": "To initialize git in the current local directory use following command:",
+      "code": "bash $ git init"
+    }
+  ]
+}

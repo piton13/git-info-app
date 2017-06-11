@@ -14,6 +14,8 @@ import { CommandListPage } from '../pages/command-list/command-list';
 import { CommandPage } from '../pages/command/command';
 import { GitInitializationPage } from '../pages/git-configuration/sub-pages/git-initialization/git-initialization';
 import { GitRemoteLinkingPage } from '../pages/git-configuration/sub-pages/remote-linking/remote-linking';
+import { HttpProvider } from '../providers/http/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { GitRemoteLinkingPage } from '../pages/git-configuration/sub-pages/remot
     GitRemoteLinkingPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -46,7 +49,8 @@ import { GitRemoteLinkingPage } from '../pages/git-configuration/sub-pages/remot
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpProvider
   ]
 })
 export class AppModule {}
