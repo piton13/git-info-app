@@ -16,7 +16,12 @@ export class HttpProvider {
   }
 
   getInitializationCommands() {
-    return this.http.get(`assets/json-data/git-initialization-data.json`)
+    return this.http.get(`assets/json-data/initialization.json`)
+      .map(res => res.json());
+  }
+
+  getRemoteLinkingCommands() {
+    return this.http.get(`assets/json-data/remote-linking.json`)
       .map(res => res.json());
   }
 

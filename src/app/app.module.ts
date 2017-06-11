@@ -11,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { GitConfigurationPage } from '../pages/git-configuration/git-configuration';
 import { GitOperationsPage } from '../pages/git-operations/git-operations';
 import { CommandListPage } from '../pages/command-list/command-list';
-import { CommandPage } from '../pages/command/command';
+import { CommandsPage } from '../pages/commands-page/commands-page';
 import { GitInitializationPage } from '../pages/git-configuration/sub-pages/git-initialization/git-initialization';
 import { GitRemoteLinkingPage } from '../pages/git-configuration/sub-pages/remote-linking/remote-linking';
 import { HttpProvider } from '../providers/http/http';
@@ -25,7 +25,7 @@ import { HttpModule } from '@angular/http';
     GitConfigurationPage,
     GitOperationsPage,
     CommandListPage,
-    CommandPage,
+    CommandsPage,
     GitInitializationPage,
     GitRemoteLinkingPage
   ],
@@ -42,7 +42,7 @@ import { HttpModule } from '@angular/http';
     GitConfigurationPage,
     GitOperationsPage,
     CommandListPage,
-    CommandPage,
+    CommandsPage,
     GitInitializationPage,
     GitRemoteLinkingPage
   ],

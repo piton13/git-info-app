@@ -9,8 +9,7 @@ import { HttpProvider } from '../../../../providers/http/http';
   ]
 })
 export class GitInitializationPage implements OnInit, OnDestroy {
-  public title: string;
-  public commands: Object[];
+  public pageData: { title: string, commands: Object[] };
 
   private subscription: any;
 
@@ -18,8 +17,7 @@ export class GitInitializationPage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.httpProvider.getInitializationCommands().subscribe(data => {
-      this.title = data.title;
-      this.commands = data.commands;
+      this.pageData = data;
     });
   }
 

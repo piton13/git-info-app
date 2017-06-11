@@ -1,0 +1,9 @@
+{
+  "title": "Git remote linking",
+  "commands": [
+    {
+      "description": "First of all remote repository and local repository should be created. Then copy link from remote repository and add it as origin in local repository using command: <span>git remote add origin @remote_url@ </span>",
+      "code": "some command"
+    }
+  ]
+}

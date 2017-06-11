@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { HttpProvider } from '../../../../providers/http/http';
 
 @Component({
   selector: 'git-remote-linking-page',
   templateUrl: 'remote-linking.html'
 })
-export class GitRemoteLinkingPage {
-  public commandInfo;
+export class GitRemoteLinkingPage implements OnInit, OnDestroy {
+  public pageData: { title: string, commands: Object[]};
+  private subscription: any;
 
-  constructor() {
-    this.commandInfo = {
-      description: 'First of all remote repository and local repository should be created. ' +
-      '</br>Then copy link from remote repository and add it as origin in local repository using ' +
-      'command: <span>git remote add origin @remote_url@ </span>',
-      code: `
-        some command
-      `
-    };
+  constructor(private httpProvider: HttpProvider) {}
+
+  ngOnInit() {
+    this.subscription = this.httpProvider.getRemoteLinkingCommands().subscribe(data => {
+      this.pageData = data;
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{pageData?.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div ion-item *ngFor="let command of pageData?.commands">
+    {{command.description}}
+    {{command.code}}
+  </div>
+</ion-content>
+
